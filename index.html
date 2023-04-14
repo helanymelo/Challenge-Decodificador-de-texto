@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="img">
+            <img src="./images/logo.png"/>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="text-main-area">
+            <div class="area">               
+
+                <div class="area-text">
+                    <div class="text-area">
+                    <textarea placeholder="Digite seu texto aqui!" id="textarea"></textarea>
+                    </div>
+                    <div class="btn">
+                        <button id="encrypt-btn">Criptografar</button>
+                        <button id="decoder-btn">Descriptografar</button>
+                        <button  id='clear-btn'>Limpar</button>
+                    </div>
+                    
+                </div>
+
+                <div class="box-text-criptografada">
+                    <div class="span-text">
+                        <span>
+                            <div>
+                                <h4>Nenhuma mensagem encontrada</h4>
+                            </div>                           
+                        </span>
+                    </div>
+                    
+
+                    <div class="btn-copy" onclick="copyText()">
+                        <button>Copiar</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Desenvolvido com 💖 por Helany Melo</h3>
+    </footer>
+
+   <script>
+
+        let clearBtn = document.querySelector("#clear-btn")
+        const textarea = document.querySelector('#textarea')
+
+
+        function encrypt(){
+           
+            const text = textarea.value
+
+            if(!text){
+               alert('Digite um texto')
+                return
+            }
+            
+            const result = text          
+            .replaceAll('e', 'enter')          
+            .replaceAll('i', 'imes')
+            .replaceAll('o', 'ober')
+            .replaceAll('u', 'ufat')
+            .replaceAll('a', 'ai')
+            document.querySelector('span').innerHTML = result
+            alert('O seu texto foi criptografado')         
+           
+        }
+
+        const buttonEncrypt = document.querySelector('#encrypt-btn')
+        buttonEncrypt.onclick = encrypt
+
+
+        function decoder(){   
+              
+           const text = textarea.value  
+           
+           if(!text){
+                alert('Digite um texto')
+                return
+            }     
+            
+           const result = text          
+           .replaceAll('enter', 'e')          
+           .replaceAll('imes', 'i')
+           .replaceAll('ober', 'o')
+           .replaceAll('ufat', 'u')
+           .replaceAll('ai', 'a')
+           document.querySelector('span').innerHTML = result
+           alert('O seu texto foi descriptografado')         
+          
+       }
+
+       const decoderBtn = document.querySelector('#decoder-btn')
+       decoderBtn.onclick = decoder
+
+      
+        
+
+        function clear(){
+            
+            if(!textarea.value){
+                alert('Não há nenhum texto para apagar')
+            }else{
+                alert('O texto foi apagado!')
+                document.querySelector('textarea').value = ""
+                document.querySelector('span').innerHTML=""
+                document.querySelector('span').innerHTML= "<h4>Nenhuma mensagem encontrada</h4>"
+
+            }
+           
+            
+        }
+
+        clearBtn.onclick = clear
+
+
+        function copyText(){
+            let textCopy = document.querySelector('span').innerHTML
+            
+            navigator.clipboard.writeText(textCopy)
+            alert("Texto copiado com sucesso")
+            
+            document.querySelector('span').innerHTML = ''
+            document.querySelector('span').innerHTML =  "<h4>Nenhuma mensagem encontrada</h4>"
+
+         
+        }
+
+
+
+        
+   </script>
+</body>
+</html>

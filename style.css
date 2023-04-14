@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #171732 ;
+    font-family: sans-serif;
+    
+
+}
+
+header{
+   
+    color: #FFF;
+    height: 10vh;
+ 
+   
+
+}
+
+.img{
+    margin-top: 8px;
+    margin-left: 50px;
+}
+
+
+
+.text-main-area{
+    width: 100vw;
+    
+    
+    
+    
+}
+
+.area{
+    display: flex;
+}
+
+.area-text{
+    width: 70%;
+}
+
+textarea{
+    width: 65%;
+    height: 400px;
+    resize: none;
+    font-size: 20px;
+    margin: 20px 50px;
+    border: none;
+    color: #ccc;
+    outline: none;
+    
+}
+
+
+
+textarea::-webkit-input-placeholder{
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn{
+    display: flex;
+    margin-left: 100px;
+    gap: 2em;
+}
+
+.btn button{
+    width: 200px;
+    height: 6vh;
+    border-radius: 20px;
+    border: 0;
+    background-color: #398d;
+    
+    cursor: pointer;
+    transition: all ease 0.5s;
+    color:#ccc;
+    font-size: 1.2em;
+}
+
+.btn button:hover{
+    background-color:rgba(21, 82, 71, 0.867) ;
+}
+
+.box-text-criptografada{
+    width: 30%;
+    margin: 20px;
+  
+   
+    
+}
+
+.span-text{
+   border: 1px solid rgb(151, 36, 151); 
+   height: 400px;
+   margin-right: 12px;
+   padding: 1em;
+   
+   border-radius: 20px;
+   font-size:20px;
+   word-break:break-all;
+ 
+  
+}
+
+
+
+span{
+    color: #ccc;
+    
+    
+    
+}
+
+h4{
+    text-align: center;
+}
+
+
+
+
+
+
+.btn-copy button{
+    width: 200px;
+    height: 6vh;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    margin: 24px 100px;
+    background-color: #398d;
+    color:#ccc;
+    font-size: 1.2em;
+}
+
+.btn-copy button:hover{
+    background-color:rgba(21, 82, 71, 0.867) ;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;  
+    height: 10vh;
+    align-items: center;
+    margin-top: 2em;
+    
+   
+}
+
+h3{
+    color: #FFF;
+}
