@@ -49,7 +49,9 @@ textarea{
     margin: 20px 50px;
     border: none;
     color: #ccc;
-    outline: none;
+    outline: none; 
+    text-transform: lowercase;
+    
     
 }
 

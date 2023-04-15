@@ -65,13 +65,15 @@
         function encrypt(){
            
             const text = textarea.value
+            
+           
 
             if(!text){
                alert('Digite um texto')
                 return
             }
             
-            const result = text          
+            const result = text
             .replaceAll('e', 'enter')          
             .replaceAll('i', 'imes')
             .replaceAll('o', 'ober')
@@ -88,23 +90,26 @@
 
         function decoder(){   
               
-           const text = textarea.value  
+           const text = textarea.value
+       
+          
            
            if(!text){
                 alert('Digite um texto')
                 return
             }     
             
-           const result = text          
+           const result = text         
            .replaceAll('enter', 'e')          
            .replaceAll('imes', 'i')
            .replaceAll('ober', 'o')
            .replaceAll('ufat', 'u')
            .replaceAll('ai', 'a')
-           document.querySelector('span').innerHTML = result
+           document.querySelector('span').innerHTML = result.toLowerCase()
            alert('O seu texto foi descriptografado')         
           
        }
+       
 
        const decoderBtn = document.querySelector('#decoder-btn')
        decoderBtn.onclick = decoder
