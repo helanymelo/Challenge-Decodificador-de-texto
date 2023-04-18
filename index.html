@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   
-    <title>Document</title>
+    <title>Decodificador de Texto</title>
 </head>
 <body>
     <header>
@@ -25,6 +25,12 @@
                     <div class="text-area">
                     <textarea placeholder="Digite seu texto aqui!" id="textarea"></textarea>
                     </div>
+
+                    <div class="info">
+                        <img src="./images/vector.png"/>
+                        <p>Apenas letras minúsculas e sem acentos</p>
+                    </div>
+
                     <div class="btn">
                         <button id="encrypt-btn">Criptografar</button>
                         <button id="decoder-btn">Descriptografar</button>
@@ -64,7 +70,8 @@
 
         function encrypt(){
            
-            const text = textarea.value
+            const text = textarea.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/gi, "")
+            
             
            
 
@@ -90,10 +97,8 @@
 
         function decoder(){   
               
-           const text = textarea.value
-       
-          
-           
+           const text = textarea.value.normalize('NFD').replace(/[\u0300-\u036f]/gi, "")
+                     
            if(!text){
                 alert('Digite um texto')
                 return
@@ -136,13 +141,16 @@
 
 
         function copyText(){
-            let textCopy = document.querySelector('span').innerHTML
+            
+            const textCopy = document.querySelector('span').innerHTML        
+           
             
             navigator.clipboard.writeText(textCopy)
             alert("Texto copiado com sucesso")
             
             document.querySelector('span').innerHTML = ''
             document.querySelector('span').innerHTML =  "<h4>Nenhuma mensagem encontrada</h4>"
+            
 
          
         }
