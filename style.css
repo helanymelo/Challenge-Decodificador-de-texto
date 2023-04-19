@@ -176,49 +176,78 @@ h3{
    
         color: #FFF;
         height: 10vh;
-        width: 100%;
-     
-       
-    
+        width: 100%;    
     }
 
     .text-main-area{
         width: 100%;
-        display: flex;
-       
-        
-        
-        
-        
-        
+        display: flex;     
     }
     
     .area{
         display: flex;
-       
-        
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;     
+        align-items: center;   
     }
     
     .area-text{
-        width: 100%;
-        margin-bottom: 10%;
-        display: flex;
-        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+        
     }
     
-    textarea{
+    .text-area{        
+       width: 100vw;   
+                 
+    }
+
+    .text-area textarea{
+        border: 1px solid #9999;
+        width:  80%;
+        margin: 2em;
+        border-radius: 10px;
+        height: 30vh;
+    }
+
+
+    .textarea::-webkit-input-placeholder{
         
-       
-        resize: none;
-        font-size: 20px;
-        margin: 20px 50px;
-        border: none;
-        color: #ccc;
-        outline: none; 
-        text-transform: lowercase;
-        
+        font-size:1.2em;
+        color: #999;
+        margin-left: 0.4em;
+    }
+
+    .info{
+       margin-left: 2em;
+    }
+
+    .btn{
+        width: 52vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .box-text-criptografada{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .span-text{
+        width:16em;
+        display: flex;
+        margin-left: 2.1em;
+        height: 16em;
         
     }
+
+    
+
+
     
 
 
