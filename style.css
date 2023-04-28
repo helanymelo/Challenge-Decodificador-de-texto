@@ -189,7 +189,7 @@ h3{
         flex-direction: column;
         width: 100%;
         justify-content: center;     
-        align-items: center;   
+          
     }
     
     .area-text{
@@ -224,10 +224,11 @@ h3{
     }
 
     .btn{
-        width: 52vw;
+        width: 50vw;
         display: flex;
         justify-content: center;
         flex-direction: column;
+     
     }
 
     .box-text-criptografada{
@@ -240,7 +241,7 @@ h3{
     .span-text{
         width:18em;
         display: flex;
-        margin-left: 2.1em;
+        margin-left: 1.2em;
         height: 14em;
         
     }

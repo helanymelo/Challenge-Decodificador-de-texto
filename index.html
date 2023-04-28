@@ -67,18 +67,27 @@
         let clearBtn = document.querySelector("#clear-btn")
         const textarea = document.querySelector('#textarea')
 
+        
+
 
         function encrypt(){
            
-            const text = textarea.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/gi, "")
-            
-            
-           
+            const text = textarea.value.toLowerCase()
+            document.querySelector('textarea').innerHTML = text
 
-            if(!text){
-               alert('Digite um texto')
+            const checkAccent = /á|é|í|ó|ú|â|ê|î|ô|û/
+            
+            if(text.match(checkAccent)){
+                alert('Acentos não são permitidos')
                 return
             }
+            
+            if(!text){
+                alert('Digite um texto')
+                return
+            }
+
+            
             
             const result = text
             .replaceAll('e', 'enter')          
@@ -97,7 +106,7 @@
 
         function decoder(){   
               
-           const text = textarea.value.normalize('NFD').replace(/[\u0300-\u036f]/gi, "")
+           const text = textarea.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
                      
            if(!text){
                 alert('Digite um texto')
@@ -111,6 +120,7 @@
            .replaceAll('ufat', 'u')
            .replaceAll('ai', 'a')
            document.querySelector('span').innerHTML = result.toLowerCase()
+           
            alert('O seu texto foi descriptografado')         
           
        }
